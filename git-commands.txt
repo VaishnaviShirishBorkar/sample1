@@ -1,0 +1,75 @@
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git remote set-url origin https://github.com/VaishnaviShirishBorkar/sample1.git
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 394 bytes | 197.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviShirishBorkar/sample1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git checkout -b add-home
+Switched to a new branch 'add-home'
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (add-home)
+$ git add home.html
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (add-home)
+$ git status
+On branch add-home
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (add-home)
+$ git commit -m "added home"
+[add-home 1579394] added home
+ 1 file changed, 11 insertions(+)
+ create mode 100644 home.html
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (add-home)
+$ git push origin add-home
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 437.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'add-home' on GitHub by visiting:
+remote:      https://github.com/VaishnaviShirishBorkar/sample1/pull/new/add-home
+remote:
+To https://github.com/VaishnaviShirishBorkar/sample1.git
+ * [new branch]      add-home -> add-home
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (add-home)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git pull origin main
+From https://github.com/VaishnaviShirishBorkar/sample1
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git merge add-home
+Updating c48d526..1579394
+Fast-forward
+ home.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 home.html
+
+lenovo@DESKTOP-R883RJL MINGW64 /d/sample1 (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaishnaviShirishBorkar/sample1.git
+   c48d526..1579394  main -> main
